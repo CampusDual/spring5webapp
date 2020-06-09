@@ -5,6 +5,7 @@
     <artifactId>spring5webapp</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
+  
   <artifactId>pet-clinic-data</artifactId>
 
   	<dependencies>
@@ -27,8 +28,31 @@
 			<artifactId>lombok</artifactId>
 			<scope>true</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope> test</scope>
+		</dependency>
 		
   </dependencies>
+  	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+							<goals>
+								<goal>repackage</goal>
+							</goals>
+							<configuration>
+								<skip>true</skip>
+							</configuration> 
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
   
   
 </project>
