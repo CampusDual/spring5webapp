@@ -102,4 +102,8 @@
 	</pluginRepositories>
 
 
+	<modules>
+		<module>pet-clinic-data</module>
+		<module>pet-clinic-web</module>
+	</modules>
 </project>
